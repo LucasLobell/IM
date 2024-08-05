@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container">
+    <h1 class="mt-4">Dashboard</h1>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Inventory</h5>
+                    <p class="card-text">Manage your inventory and keep track of all materials.</p>
+                    <a href="@Url.Action("Index", "Materials")" class="btn btn-primary">Go to Inventory</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Reports</h5>
+                    <p class="card-text">View detailed reports about your inventory usage.</p>
+                    <a href="@Url.Action("Index", "Reports")" class="btn btn-primary">View Reports</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Settings</h5>
+                    <p class="card-text">Update your account settings and preferences.</p>
+                    <a href="@Url.Action("Index", "Settings")" class="btn btn-primary">Go to Settings</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

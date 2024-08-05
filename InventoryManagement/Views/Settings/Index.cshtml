@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Settings";
+}
+
+<h1>Settings</h1>
+<div>
+    <label for="darkModeToggle">Dark Mode</label>
+    <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()" />
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById('darkModeToggle').checked = localStorage.getItem('darkMode') === 'true';
+            document.getElementById('languageSelect').value = localStorage.getItem('language') || 'en';
+        });
+
+        function toggleDarkMode() {
+            const darkMode = document.getElementById('darkModeToggle').checked;
+            localStorage.setItem('darkMode', darkMode);
+        }
+    </script>
+}

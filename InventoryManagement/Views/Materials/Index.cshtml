@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Materials";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Marketing Artifacts</h5>
+                    <p class="card-text">Manage your marketing materials and artifacts.</p>
+                    <a href="@Url.Action("MarketingArtifacts", "Materials")" class="btn btn-primary">Go to Marketing Artifacts</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Inventory</h5>
+                    <p class="card-text">Manage your inventory of materials.</p>
+                    <a href="@Url.Action("Index", "Inventory")" class="btn btn-primary">Go to Inventory</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Reports";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">History Report</h5>
+                    <p class="card-text">View the history of material entries and exits.</p>
+                    <a href="@Url.Action("History", "Reports")" class="btn btn-primary">View History Report</a>
+                </div>
+            </div>
+        </div>
+        <!-- Additional report cards can be added here -->
+    </div>
+</div>

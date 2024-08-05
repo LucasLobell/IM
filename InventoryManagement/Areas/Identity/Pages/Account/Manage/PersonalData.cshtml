@@ -1,0 +1,30 @@
+﻿@page
+@model InventoryManagement.Areas.Identity.Pages.Account.Manage.PersonalDataModel
+@{
+    ViewData["Title"] = "Personal Data";
+}
+
+<h1>@ViewData["Title"]</h1>
+<p>Your account contains personal data that you have given us. This page allows you to download or delete that data.</p>
+
+<p>
+    Deleting this data will permanently remove your account, and this cannot be recovered.
+</p>
+
+<form method="post" asp-page-handler="Download">
+    <button type="submit" class="btn btn-primary">Download</button>
+</form>
+<form method="post" asp-page-handler="Delete">
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+
+<style>
+    form {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .btn-danger {
+        margin-left: 10px;
+    }
+</style>

@@ -1,0 +1,11 @@
+﻿@page
+@model InventoryManagement.Areas.Identity.Pages.Account.RegisterConfirmationModel
+@{
+    ViewData["Title"] = "Register confirmation";
+}
+
+<h1>@ViewData["Title"]</h1>
+<p>
+    Please check your email to confirm your account. If you did not receive the email,
+    please check your spam folder or <a href="@Url.Page("/Account/ResendEmailConfirmation")">resend the confirmation email</a>.
+</p>

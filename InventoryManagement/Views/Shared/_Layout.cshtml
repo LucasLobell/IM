@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="titolo">Inventory Management</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-jLKHWM9c9Qd1t9PCAqJysJ89+JKtZLfJKPQcU5y6QOQ5+v3kNHj8UgFfXl6OWz6B" crossorigin="anonymous" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link id="dark-mode-css" rel="stylesheet" href="~/css/dark-mode.css" />
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+            if (darkModeEnabled) {
+                document.getElementById('dark-mode-css').href = '/css/dark-mode.css';
+            } else {
+                document.getElementById('dark-mode-css').href = '';
+            }
+        });
+
+        function toggleDarkMode() {
+            const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+            const newMode = !darkModeEnabled;
+            localStorage.setItem('darkMode', newMode);
+            document.getElementById('dark-mode-css').href = newMode ? '/css/dark-mode.css' : '';
+        }
+
+        window.onload = function () {
+            const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+            if (darkModeEnabled) {
+                const elementsToUpdate = document.querySelectorAll('body, .navbar, .navbar a, .navbar-brand, .nav-link, .card, .footer, h1, h2, h3, h4, h5, h6, label, .card-title, .card-text, .table th, .table td, .navbar-nav .nav-item .nav-link, .container');
+                elementsToUpdate.forEach(element => {
+                    element.style.color = '#e0e0e0';
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light" id="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")">Inventory Management</a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Materials" asp-action="Index">Materials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Reports" asp-action="Index">Reports</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <partial name="_LoginPartial" />
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index">
+                                <i class="fas fa-user-circle fa-2x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="~/lib/fontawesome/js/all.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

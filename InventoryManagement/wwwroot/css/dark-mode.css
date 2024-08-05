@@ -1,0 +1,126 @@
+﻿body {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+.navbar {
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+}
+
+    .navbar a, .navbar-brand, .nav-link {
+        color: #e0e0e0 !important;
+    }
+
+.card {
+    background-color: #424242 !important;
+    color: #e0e0e0 !important;
+}
+
+.btn-primary {
+    background-color: #1b6ec2 !important;
+    border-color: #1861ac !important;
+    color: #fff !important;
+}
+
+.btn-secondary {
+    background-color: #555 !important;
+    border-color: #444 !important;
+    color: #fff !important;
+}
+
+.btn-info {
+    background-color: #17a2b8 !important;
+    border-color: #117a8b !important;
+    color: #fff !important;
+}
+
+.btn-danger {
+    background-color: #dc3545 !important;
+    border-color: #bd2130 !important;
+    color: #fff !important;
+}
+
+.btn-success {
+    background-color: #28a745 !important;
+    border-color: #1e7e34 !important;
+    color: #fff !important;
+}
+
+.btn-warning {
+    background-color: #ffc107 !important;
+    border-color: #d39e00 !important;
+    color: #000 !important; /* Adjusted for readability */
+}
+
+.footer {
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+}
+
+a {
+    color: #fff !important;
+}
+
+    a:hover {
+        color: #ff6347 !important;
+    }
+
+.table {
+    background-color: #424242 !important;
+    color: #e0e0e0 !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #424242 !important;
+    color: #e0e0e0 !important;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #555 !important;
+}
+
+.thead-dark th {
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+}
+
+.sort-link {
+    color: #e0e0e0 !important;
+}
+
+    .sort-link:hover {
+        text-decoration: underline !important;
+    }
+
+.pagination a {
+    color: #e0e0e0 !important;
+}
+
+.table tr:hover {
+    background-color: #555 !important;
+}
+
+h1, h2, h3, h4, h5, h6, label, .card-title, .card-text, .nav-link, .table th, .table td, .navbar-nav .nav-item .nav-link, .container, .footer {
+    color: #e0e0e0 !important;
+}
+
+input, textarea, select {
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #555 !important;
+}
+
+    input::placeholder, textarea::placeholder {
+        color: #999 !important;
+    }
+
+.btn-warning {
+    color: #000 !important; /* Adjusted for readability */
+}
